@@ -1,6 +1,8 @@
 ﻿using Auction_Web_App.Data;
 using Auction_Web_App.Dto.Coin;
+using Auction_Web_App.Extensions;
 using Auction_Web_App.Interfaces;
+using Auction_Web_App.Mappers;
 using Auction_Web_App.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
