@@ -4,7 +4,7 @@ namespace Auction_Web_App.Models
 {
     public class User : IdentityUser
     {
-        public List<Art> Art { get; set; } = new List<Art>();
+        public List<Coin> Coin { get; set; } = new List<Coin>();
         public List<Auction> Auction { get; set; } = new List<Auction>();
     }
 }

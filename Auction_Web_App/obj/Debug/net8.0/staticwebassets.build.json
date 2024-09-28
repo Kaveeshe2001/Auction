@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "b5PojbmpeMz95TKxXuFlWsAqB+2/m+/sAJBz6WQN+W8=",
+  "Source": "Auction_Web_App",
+  "BasePath": "_content/Auction_Web_App",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
