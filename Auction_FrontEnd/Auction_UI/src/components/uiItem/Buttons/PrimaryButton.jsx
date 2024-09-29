@@ -19,14 +19,14 @@ const PrimaryButton = ({
   className = "",
   disabled = false
 }) => {
-  const baseStyles = "px-4 py-2 rounded-md font-semibold transition-colors duration-200 flex items-center justify-center";
+  const baseStyles = "relative font-medium -top-1 -left-1 hover:top-0 hover:left-0 transition-all bg-gray-800 py-2.5 px-5 uppercase text-white before:content-[''] before:absolute before:top-1 before:left-1 before:hover:left-0 before:w-full before:h-full before:border-2 before:border-gray-700 before:-z-10 before:transition-all";
   const styles = `${baseStyles} ${variantStyles[variant]} ${className}`;
 
   const IconComponent = icon ? icon : ArrowRight;
 
   const buttonContent = (
     <>
-      <span>{text}</span>
+      <span className='text-neutral-100 tracking-wide font-light h-full w-full block relative linear-mask'>{text}</span>
       {icon && <IconComponent className="ml-2 h-5 w-5" />}
     </>
   );
