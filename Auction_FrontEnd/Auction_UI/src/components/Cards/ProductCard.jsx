@@ -5,7 +5,7 @@ import PrimaryButton from '../uiItem/Buttons/PrimaryButton';
 
 const ProductCard = ({ coin }) => {
   return (
-    <div className="w-64 rounded-lg overflow-hidden bg-gray-800 shadow-lg">
+    <div className="w-64 rounded-lg overflow-hidden bg-gray-800 shadow-lg hover:shadow-[0_4px_20px_rgba(0,119,182,0.7)] transition-transform transform hover:scale-105 duration-300">
       <div className="relative">
         <a href="" className="card-image block">
           <img
