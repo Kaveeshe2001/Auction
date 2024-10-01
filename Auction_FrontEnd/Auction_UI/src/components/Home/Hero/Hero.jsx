@@ -1,15 +1,16 @@
 import React from 'react';
 import homeBanner from '../../../assets/banner.jpg';
+import HeroSub from '../../../assets/coinlg.png';
 import { RiArrowRightDownLine } from '@remixicon/react';
+import PrimaryButton from "../../uiItem/Buttons/PrimaryButton";
 
 const Hero = () => {
   return (
-    <div className="bg-[url('/banner.png')] bg-cover bg-no-repeat bg-center pt-[150px] mb-[120px]">
-      <div className="overflow-hidden">
+    <div className="bg-cover bg-no-repeat bg-center pt-[150px] mb-[120px]" style={{ backgroundImage: `url(${homeBanner})` }}>
+      <div className="overflow-hidden flex">
         <div className="border-r border-white/10 pt-[118px]">
-          <div className="max-w-[810px] w-full mb-[150px]">
+          <div className="max-w-[810px] w-full mb-[150px] ml-5">
             <span className="text-white font-dmsans text-xs font-medium inline-flex items-center gap-2 py-2.5 px-3 bg-white/10 rounded-full mb-4">
-              <svg className="fill-white" />
               Subtitle
             </span>
             <h1 className="text-white font-dmsans text-[70px] font-extrabold leading-tight mb-6">
@@ -19,18 +20,18 @@ const Hero = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <div className="flex items-center gap-[30px]">
-                    <PrimaryButton
-                      text='start a bid'
-                      variant='white'
-                      icon={<RiArrowRightDownLine size={16} />}
-                    />
-                    <PrimaryButton text='view all auction' variant='default' />
+              <PrimaryButton
+                text="start a bid"
+                variant="secondary"
+                icon={RiArrowRightDownLine} 
+              />
+              <PrimaryButton text="view all auction" variant="secondary" /> 
             </div>
           </div>
         </div>
-        <div className="h-full relative">
+        <div className="h-full relative flex items-center justify-center ml-10">
           <div className="flex items-center justify-center h-full">
-          <img src={homeBanner} alt='homeBanner' />
+            <img src={HeroSub} alt="HeroSub" className='w-[500px] h-[500px]'/>
           </div>
         </div>
       </div>

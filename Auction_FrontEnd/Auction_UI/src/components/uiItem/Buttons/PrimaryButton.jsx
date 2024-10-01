@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const variantStyles = {
-  primary: "bg-blue-600 hover:bg-blue-700 text-white",
   secondary: "bg-gray-200 hover:bg-gray-300 text-gray-800",
   outline: "bg-transparent hover:bg-gray-100 text-blue-600 border border-blue-600 before:content-[''] before:absolute before:top-1 before:left-1 before:hover:left-0 before:w-full before:h-full before:border-2 before:border-gray-700 before:-z-10 before:transition-all",
 };
@@ -19,14 +18,14 @@ const PrimaryButton = ({
   className = "",
   disabled = false
 }) => {
-  const baseStyles = "relative font-medium -top-1 -left-1 hover:top-0 hover:left-0 transition-all bg-blue-900 py-2.5 px-5 uppercase text-white";
+  const baseStyles = "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800";
   const styles = `${baseStyles} ${variantStyles[variant]} ${className}`;
 
   const IconComponent = icon ? icon : ArrowRight;
 
   const buttonContent = (
     <>
-      <span>{text}</span>
+      <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>{text}</span>
       {icon && <IconComponent className="ml-2 h-5 w-5" />}
     </>
   );
