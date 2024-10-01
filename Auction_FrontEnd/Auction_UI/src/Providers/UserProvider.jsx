@@ -12,13 +12,13 @@ export const UserProvider = ({ children }) => {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    const user = localStorage.getItem('user');
-    const token = localStorage.getItem('token');
+    const storedUser = localStorage.getItem('user');
+    const storedToken = localStorage.getItem('token');
 
-    if (user && token) {
-      setUser(JSON.parse(user));
-      setToken(token);
-      axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
+    if (storedUser && storedToken) {
+      setUser(JSON.parse(storedUser));
+      setToken(storedToken);
+      axios.defaults.headers.common['Authorization'] = `Bearer ${storedToken}`;
     }
     setIsReady(true);
   }, []);
@@ -26,54 +26,50 @@ export const UserProvider = ({ children }) => {
   const registerUser = async (email, username, phoneNumber, password) => {
     try {
       const res = await registerAPI(email, username, phoneNumber, password);
-      if (res) {
-        localStorage.setItem('token', res.data.token);
-        const userObj = {
-          userName: res.data.userName,
-          email: res.data.email,
-          phoneNumber: res.data.phoneNumber,
-        };
-        localStorage.setItem('user', JSON.stringify(userObj));
-        setToken(res.data.token);
-        setUser(userObj);
+      if (res && res.data) {
+        handleAuthResponse(res.data);
         toast.success('Account Created Successfully');
         navigate('/');
       }
     } catch (e) {
-      toast.warning('Server Error Occurred: ' + e);
+      toast.error(`Registration failed: ${e.message}`);
     }
   };
 
   const loginUser = async (username, password) => {
     try {
       const res = await loginAPI(username, password);
-      if (res) {
-        localStorage.setItem('token', res.data.token);
-        const userObj = {
-          userName: res.data.userName,
-          email: res.data.email,
-          phoneNumber: res.data.phoneNumber,
-        };
-        localStorage.setItem('user', JSON.stringify(userObj));
-        setToken(res.data.token);
-        setUser(userObj);
+      if (res && res.data) {
+        handleAuthResponse(res.data);
         toast.success('Login Success');
         navigate('/');
       }
     } catch (e) {
-      toast.warning('Server Error Occurred: ' + e);
+      toast.error(`Login failed: ${e.message}`);
     }
   };
 
-  const isLoggedIn = () => {
-    return !!user;
+  const handleAuthResponse = (data) => {
+    localStorage.setItem('token', data.token);
+    const userObj = {
+      userName: data.userName,
+      email: data.email,
+      phoneNumber: data.phoneNumber,
+    };
+    localStorage.setItem('user', JSON.stringify(userObj));
+    setToken(data.token);
+    setUser(userObj);
+    axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
   };
+
+  const isLoggedIn = () => !!user;
 
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     setUser(null);
-    setToken('');
+    setToken(null);
+    delete axios.defaults.headers.common['Authorization'];
     navigate('/');
   };
 

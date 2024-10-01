@@ -1,18 +1,17 @@
+// App.jsx
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Main/Navbar/Navbar';
-import Hero from './components/Home/Hero/Hero';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Layout from './Layout/Layout';
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Hero />
-      </div>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;
