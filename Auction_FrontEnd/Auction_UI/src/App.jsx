@@ -1,19 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Send } from 'lucide-react';
 import './App.css';
-import PrimaryButton from './components/uiItem/Buttons/PrimaryButton';
+import Navbar from './components/Main/Navbar/Navbar';
 
 function App() {
   return (
     <Router>
-      <div className="p-4 space-y-4">
-        <PrimaryButton 
-          text="Click me" 
-          onClick={() => console.log('Clicked')} 
-        />
-        
-        
+      <div className="App">
+        <Navbar />
       </div>
     </Router>
   );
