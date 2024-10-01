@@ -6,7 +6,7 @@ import PrimaryButton from "../../uiItem/Buttons/PrimaryButton";
 
 const Hero = () => {
   return (
-    <div className="bg-cover bg-no-repeat bg-center pt-[150px] mb-[120px]" style={{ backgroundImage: `url(${homeBanner})` }}>
+    <div className="bg-cover bg-no-repeat bg-center pt-[150px]" style={{ backgroundImage: `url(${homeBanner})` }}>
       <div className="overflow-hidden flex">
         <div className="border-r border-white/10 pt-[118px]">
           <div className="max-w-[810px] w-full mb-[150px] ml-5">
