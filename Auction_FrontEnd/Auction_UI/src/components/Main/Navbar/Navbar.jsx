@@ -112,8 +112,8 @@ const Navbar = () => {
           ) : (
             <>
               <div className='flex gap-2'>
-              <PrimaryButton text='Signup' variant='secondary' link='/signup' />
-              <PrimaryButton text='Login' variant='secondary' link='/login' />
+                <PrimaryButton text='Signup' variant='secondary' href='/signup' />
+                <PrimaryButton text='Login' variant='secondary' href='/login' />
               </div>
             </>
           )}

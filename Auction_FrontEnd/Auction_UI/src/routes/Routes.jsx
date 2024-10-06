@@ -1,11 +1,11 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
-import Home from '../pages/Home/Home';
-import Login from '../pages/Login/Login';
-import Signup from '../pages/Signup/Signup';
-import AddArt from '../pages/AddArt/AddArt';
+import Home from '../Pages/Home';
+import Login from '../Pages/Login/Login';
+import Registration from '../Pages/Register/Registration';
 import ProtectedRoute from './ProtectedRoute';
+import AddArt from '../Pages/AddArt/AddArt'; 
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'login', element: <Login /> },
-      { path: 'signup', element: <Signup /> },
+      { path: 'signup', element: <Registration /> },
       {
         path: 'add-art',
         element: (

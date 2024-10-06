@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../Handlers/useAuthContext';
+import { useAuthContext } from '../Handlers/useAuthContext';
 
 const ProtectedRoute = ({ children }) => {
   const location = useLocation();
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn } = useAuthContext();
 
   return isLoggedIn() ? (
     <>{children}</>

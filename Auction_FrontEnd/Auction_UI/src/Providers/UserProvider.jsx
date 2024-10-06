@@ -25,27 +25,35 @@ export const UserProvider = ({ children }) => {
 
   const registerUser = async (email, username, phoneNumber, password) => {
     try {
-      const res = await registerAPI(email, username, phoneNumber, password);
+      const res = await axios.post('https://localhost:7020/api/Account/register', {
+        email,
+        username,
+        phoneNumber,
+        password
+      });
       if (res && res.data) {
         handleAuthResponse(res.data);
         toast.success('Account Created Successfully');
         navigate('/');
       }
     } catch (e) {
-      toast.error(`Registration failed: ${e.message}`);
+      toast.error(`Registration failed: ${e.response?.data?.message || e.message}`);
     }
   };
 
-  const loginUser = async (username, password) => {
+  const loginUser = async (email, password) => {
     try {
-      const res = await loginAPI(username, password);
+      const res = await axios.post('https://localhost:7020/api/Account/login', {
+        email,
+        password
+      });
       if (res && res.data) {
         handleAuthResponse(res.data);
         toast.success('Login Success');
         navigate('/');
       }
     } catch (e) {
-      toast.error(`Login failed: ${e.message}`);
+      toast.error(`Login failed: ${e.response?.data?.message || e.message}`);
     }
   };
 

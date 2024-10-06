@@ -1,16 +1,24 @@
-// App.jsx
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import Layout from './Layout/Layout';
+import { Outlet, useLocation } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { UserProvider } from './Providers/UserProvider';
+import Navbar from './components/Main/Navbar/Navbar';
+import Footer from './components/Main/Footer/Footer';
 
 const App = () => {
+  const location = useLocation();
+  const showNavbar = !['/login', '/signup', '/add-art'].includes(
+    location.pathname
+  );
+
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-      </Route>
-    </Routes>
+    <UserProvider>
+      {showNavbar && <Navbar />}
+      <Outlet />
+      <Footer />
+      <ToastContainer />
+    </UserProvider>
   );
 };
 
