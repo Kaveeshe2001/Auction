@@ -26,7 +26,7 @@ const steps = [
 
 const CoinAuctionSteps = () => {
   return (
-    <div className="bg-gray-900 text-white p-8">
+    <div className="bg-gradient-to-r from-indigo-950 via-purple-950 to-pink-950 text-white p-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {steps.map((step, index) => (
           <div className="w-70 p-5 rounded-lg overflow-hidden bg-gray-800 shadow-lg hover:shadow-[0_4px_20px_rgba(0,119,182,0.7)] transition-transform transform hover:scale-105 duration-300">

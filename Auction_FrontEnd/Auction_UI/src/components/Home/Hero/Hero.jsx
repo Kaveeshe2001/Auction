@@ -14,10 +14,10 @@ const Hero = () => {
               Subtitle
             </span>
             <h1 className="text-white font-dmsans text-[70px] font-extrabold leading-tight mb-6">
-              Title with <span className="font-playfair font-semibold italic">Emphasis</span>
+              Civil Rights <span className="font-playfair font-semibold italic">Movement Coins</span>
             </h1>
             <p className="text-white/70 font-dmsans text-[17px] font-light leading-[30px] mb-10">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Join us for an exceptional numismatic journey as we unveil a remarkable collection of rare and valuable <br/> coins from around the world.
             </p>
             <div className="flex items-center gap-[30px]">
               <PrimaryButton
