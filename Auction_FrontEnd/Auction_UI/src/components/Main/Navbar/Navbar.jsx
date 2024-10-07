@@ -67,7 +67,7 @@ const Navbar = () => {
       <header className="flex items-center justify-between flex-nowrap mx-5">
         <div className="flex items-center justify-between gap-20">
           <div className="nav-logo">
-            <a href="#">
+            <a href="/home">
               <img src={Logo} alt="logo" className="w-15 h-12" />
             </a>
           </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="px-6">
-                <a href="#" className="relative font-semibold text-base py-6 block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                <a href="/contact" className="relative font-semibold text-base py-6 block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                   Contact
                 </a>
               </li>
