@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-white shadow dark:bg-gray-900">
         <div className="w-full mx-auto max-w-screen-xl p-4 md:py-8">
             <div className="sm:flex sm:items-center sm:justify-between">
-                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                     <img src={Logo} className="h-8" alt="Logo" />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Coino</span>
                 </a>
@@ -23,7 +23,7 @@ const Footer = () => {
                 </ul>
             </div>
             <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="" class="hover:underline">Coino™</a>. All Rights Reserved.</span>
+            <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="" className="hover:underline">Coino™</a>. All Rights Reserved.</span>
         </div>
     </footer>
   )

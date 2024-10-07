@@ -3,56 +3,85 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../../Handlers/useAuthContext';
 
 const RegInput = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [phoneNo, setPhoneNo] = useState("");
-    const { registerUser } = useAuthContext();
-    const navigate = useNavigate();
-  
-    const handleSave = async (e) => {
-        e.preventDefault();
+  const { registerUser } = useAuthContext();
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [errors, setErrors] = useState({});
 
-        try {
-            await registerUser(email, name, phoneNo, password);
-            // Form fields will be cleared and user redirected by the registerUser function
-        } catch (error) {
-            console.error('Error during registration:', error);
-            // Error handling is done within the registerUser function
-        }
-    };
+  const navigate = useNavigate();
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-        navigate('/login');
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = {};
+
+    if (!username) {
+      newErrors.username = 'Username is required';
+    }
+
+    if (!email) {
+      newErrors.email = 'Email is required';
+    }
+
+    if (!phone) {
+      newErrors.phone = 'Phone Number is required';
+    }
+
+    if (!password) {
+      newErrors.password = 'Password is required';
+    }
+
+    if (!confirmPassword) {
+      newErrors.confirmPassword = 'Confirm Password is Required';
+    }
+
+    if (password !== confirmPassword) {
+      newErrors.password = "Passwords don't match";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      setErrors({});
+      registerUser(email, username, phone, password);
+    }
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    navigate('/register');
+  };
 
     return (
         <div>
-            <form className='flex flex-col' onSubmit={handleSave}>
+            <form className='flex flex-col' onSubmit={handleSubmit}>
                 <div className="mb-5">
-                    <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Your name</label>
+                    <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Username</label>
                     <input 
                         type="text" 
-                        name='Name' 
-                        id="name" 
-                        value={name} 
-                        onChange={(e) => setName(e.target.value)} 
+                        name='username' 
+                        id="username" 
+                        value={username} 
+                        onChange={(e) => setUsername(e.target.value)} 
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-                        placeholder="Kaveeshe Waduge" 
+                        placeholder="kaveeshewaduge" 
+                        error={errors.username}
                         required 
                     />
                 </div>
                 <div className="mb-5">
-                    <label htmlFor="phoneNo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Your Phone Number</label>
+                    <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Your Phone Number</label>
                     <input 
                         type="text" 
-                        name='PhoneNO' 
-                        id="phoneNo" 
-                        value={phoneNo} 
-                        onChange={(e) => setPhoneNo(e.target.value)} 
+                        name='Phone' 
+                        id="phone" 
+                        value={phone} 
+                        onChange={(e) => setPhone(e.target.value)} 
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                         placeholder="+94 xxxxxxxxx" 
+                        error={errors.phone}
                         required 
                     />
                 </div>
@@ -66,6 +95,7 @@ const RegInput = () => {
                         onChange={(e) => setEmail(e.target.value)} 
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                         placeholder="name@example.com" 
+                        error={errors.email}
                         required 
                     />
                 </div>
@@ -77,6 +107,19 @@ const RegInput = () => {
                         id="password" 
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                        required 
+                        error={errors.password}
+                    />
+                </div>
+                <div className="mb-5">
+                    <label htmlFor="Confirm Password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Confirm password</label>
+                    <input 
+                        type="password" 
+                        name='cPassword' 
+                        id="cpassword" 
+                        value={confirmPassword} 
+                        onChange={(e) => setConfirmPassword(e.target.value)} 
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                         required 
                     />

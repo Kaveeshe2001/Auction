@@ -8,7 +8,7 @@ const RegForm = () => {
       {/* Image - hidden on mobile, visible on md screens and above */}
       <div className="hidden md:block md:w-1/2">
         <img
-          className="rounded-2xl h-[550px] w-[350px] object-cover"
+          className="rounded-2xl h-[650px] w-[350px] object-cover"
           src={loginBg}
           alt="Register background"
         />

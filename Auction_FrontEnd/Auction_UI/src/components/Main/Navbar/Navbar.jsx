@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { Search, User } from 'lucide-react';
-import Logo from "../../../assets/coinlg.png"
+import Logo from "../../../assets/coinlg.png";
+import { useNavigate } from "react-router-dom";
 import CustomSearch from "../../uiItem/Search/CustomSearch"
 import PrimaryButton from "../../uiItem/Buttons/PrimaryButton"
 import SecondaryButton from '../../uiItem/Buttons/SecondaryButton';
 
 const Navbar = () => {
   const [activeSidebar, setActiveSidebar] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Mock login state
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -18,6 +20,14 @@ const Navbar = () => {
     e.preventDefault();
     setIsLoggedIn(false);
   };
+
+  const handleSave = () => {
+    navigate("/register"); 
+  }
+
+  const handleLogin = () => {
+    navigate("/login"); 
+  }
 
   return (
     <div className="w-full absolute z-50 bg-transparent border-b border-white/10 ">
@@ -112,8 +122,8 @@ const Navbar = () => {
           ) : (
             <>
               <div className='flex gap-2'>
-                <PrimaryButton text='Signup' variant='secondary' href='/signup' />
-                <PrimaryButton text='Login' variant='secondary' href='/login' />
+                <PrimaryButton text='Signup' variant='secondary' href='/register' onClick={(e) => handleSave(e)} />
+                <PrimaryButton text='Login' variant='secondary' href='/login' onClick={(e) => handleLogin(e)}/>
               </div>
             </>
           )}

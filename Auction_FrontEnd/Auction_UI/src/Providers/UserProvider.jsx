@@ -1,9 +1,10 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { loginAPI, registerAPI } from '../Services/AuthServices';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 
-export const UserContext = createContext();
+export const UserContext = createContext({});
 
 export const UserProvider = ({ children }) => {
   const navigate = useNavigate();
@@ -12,72 +13,66 @@ export const UserProvider = ({ children }) => {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('user');
-    const storedToken = localStorage.getItem('token');
+    const user = localStorage.getItem('user');
+    const token = localStorage.getItem('token');
 
-    if (storedUser && storedToken) {
-      setUser(JSON.parse(storedUser));
-      setToken(storedToken);
-      axios.defaults.headers.common['Authorization'] = `Bearer ${storedToken}`;
+    if (user && token) {
+      setUser(JSON.parse(user));
+      setToken(token);
+      axios.defaults.headers.common['Authorization'] = 'Bearer' + token;
     }
     setIsReady(true);
   }, []);
 
   const registerUser = async (email, username, phoneNumber, password) => {
-    try {
-      const res = await axios.post('https://localhost:7020/api/Account/register', {
-        email,
-        username,
-        phoneNumber,
-        password
-      });
-      if (res && res.data) {
-        handleAuthResponse(res.data);
-        toast.success('Account Created Successfully');
-        navigate('/');
-      }
-    } catch (e) {
-      toast.error(`Registration failed: ${e.response?.data?.message || e.message}`);
-    }
+    await registerAPI(email, username, phoneNumber, password)
+      .then((res) => {
+        if (res) {
+          localStorage.setItem('token', res?.data.token);
+          const userObj = {
+            userName: res?.data.userName,
+            email: res?.data.email,
+            phoneNumber: res?.data.phoneNumber,
+          };
+          localStorage.setItem('user', JSON.stringify(userObj));
+          setToken(res?.data.token);
+          setUser(userObj);
+          toast.success('Account Created Successfully');
+          navigate('/');
+        }
+      })
+      .catch((e) => toast.warning('Server Error Occurred' + e));
   };
 
-  const loginUser = async (email, password) => {
-    try {
-      const res = await axios.post('https://localhost:7020/api/Account/login', {
-        email,
-        password
-      });
-      if (res && res.data) {
-        handleAuthResponse(res.data);
-        toast.success('Login Success');
-        navigate('/');
-      }
-    } catch (e) {
-      toast.error(`Login failed: ${e.response?.data?.message || e.message}`);
-    }
+  const loginUser = async (username, password) => {
+    await loginAPI(username, password)
+      .then((res) => {
+        if (res) {
+          localStorage.setItem('token', res?.data.token);
+          const userObj = {
+            userName: res?.data.userName,
+            email: res?.data.email,
+            phoneNumber: res?.data.phoneNumber,
+          };
+          localStorage.setItem('user', JSON.stringify(userObj));
+          setToken(res?.data.token);
+          setUser(userObj);
+          toast.success('Login Success');
+          navigate('/');
+        }
+      })
+      .catch((e) => toast.warning('Server Error Occurred' + e));
   };
 
-  const handleAuthResponse = (data) => {
-    localStorage.setItem('token', data.token);
-    const userObj = {
-      userName: data.userName,
-      email: data.email,
-      phoneNumber: data.phoneNumber,
-    };
-    localStorage.setItem('user', JSON.stringify(userObj));
-    setToken(data.token);
-    setUser(userObj);
-    axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
+  const isLoggedIn = () => {
+    return !!user;
   };
-
-  const isLoggedIn = () => !!user;
 
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     setUser(null);
-    setToken(null);
-    delete axios.defaults.headers.common['Authorization'];
+    setToken('');
     navigate('/');
   };
 
@@ -89,5 +84,3 @@ export const UserProvider = ({ children }) => {
     </UserContext.Provider>
   );
 };
-
-export default UserProvider;
