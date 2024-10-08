@@ -29,7 +29,7 @@ const ProductDetails = () => {
     return (
       <div className="bg-gray-900 pt-[120px]">
         <div className="container mx-auto px-4 py-16">
-          <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+          <div className="bg-gray-900 rounded-lg shadow-xl overflow-hidden">
             <div className="md:flex">
               <ProductDetailsLeft mainImage={mainImage} images={images} changeImage={changeImage} />
               <ProductDetailsRight />

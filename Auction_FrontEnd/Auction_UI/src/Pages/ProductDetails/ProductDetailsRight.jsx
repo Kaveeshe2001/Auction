@@ -5,11 +5,10 @@ const ProductDetailsRight = () => {
   
     return (
       <div className='w-full md:w-1/2 p-6'>
-        <h2 className="text-3xl font-bold mb-2">Premium Wireless Headphones</h2>
-        <p className="text-gray-600 mb-4">SKU: WH1000XM4</p>
+        <h2 className="text-3xl text-white font-bold mb-2">Premium Wireless Headphones</h2>
+        <p className="text-gray-300 mb-4">SKU: WH1000XM4</p>
         <div className="mb-4">
-          <span className="text-2xl font-bold mr-2">$349.99</span>
-          <span className="text-gray-500 line-through">$399.99</span>
+          <span className="text-2xl text-white font-bold mr-2">$349.99</span>
         </div>
         <div className="flex items-center mb-4">
           {[...Array(5)].map((_, i) => (
@@ -17,12 +16,12 @@ const ProductDetailsRight = () => {
               <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
             </svg>
           ))}
-          <span className="ml-2 text-gray-600">4.5 (120 reviews)</span>
+          <span className="ml-2 text-gray-400">4.5 (120 reviews)</span>
         </div>
-        <p className="text-gray-700 mb-6">Experience premium sound quality and industry-leading noise cancellation with these wireless headphones. Perfect for music lovers and frequent travelers.</p>
+        <p className="text-gray-300 mb-6">Experience premium sound quality and industry-leading noise cancellation with these wireless headphones. Perfect for music lovers and frequent travelers.</p>
   
         <div className="mb-6">
-          <h3 className="text-lg font-semibold mb-2">Color:</h3>
+          <h3 className="text-lg text-white font-semibold mb-2">Color:</h3>
           <div className="flex space-x-2">
             {['bg-black', 'bg-gray-300', 'bg-blue-500'].map((color, index) => (
               <button key={index} className={`w-8 h-8 ${color} rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${color.split('-')[1]}`}></button>
@@ -31,7 +30,7 @@ const ProductDetailsRight = () => {
         </div>
   
         <div className="mb-6">
-          <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-1">Quantity:</label>
+          <label htmlFor="quantity" className="block text-sm font-medium text-gray-300 mb-1">Quantity:</label>
           <input
             type="number"
             id="quantity"
@@ -59,8 +58,8 @@ const ProductDetailsRight = () => {
         </div>
   
         <div>
-          <h3 className="text-lg font-semibold mb-2">Key Features:</h3>
-          <ul className="list-disc list-inside text-gray-700">
+          <h3 className="text-lg text-white font-semibold mb-2">Key Features:</h3>
+          <ul className="list-disc list-inside text-gray-400">
             <li>Industry-leading noise cancellation</li>
             <li>30-hour battery life</li>
             <li>Touch sensor controls</li>
