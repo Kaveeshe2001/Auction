@@ -6,7 +6,7 @@ namespace Auction_Web_App.Interfaces
     {
         Task<List<Coin>> GetAllAsync();
         Task<Coin?> GetByIdAsync(int id);
-        Task<Coin?> GetByUserAsync(string userId);
+        Task<List<Coin>> GetByUserAsync(string userId); 
         Task<Coin?> UpdateAsync(int id, Coin coinModel);
         Task<Coin> CreateAsync(Coin coinModel);
         Task<Coin?> DeleteAsync(int id);

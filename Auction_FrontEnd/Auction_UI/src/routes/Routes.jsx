@@ -7,6 +7,7 @@ import Registration from '../Pages/Register/Registration';
 import ProtectedRoute from './ProtectedRoute';
 import AddArt from '../Pages/AddArt/AddArt';
 import Contact from '../Pages/Contact/Contact'; // Import the Contact component
+import ProductDetails from '../Pages/ProductDetails/ProductDetails';
 
 export const router = createBrowserRouter([
   {
@@ -24,7 +25,8 @@ export const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
-      { path: 'contact', element: <Contact /> }, // Add the contact route here
+      { path: 'contact', element: <Contact /> },
+      { path: 'productDetails', element: <ProductDetails /> },
     ],
   },
 ]);

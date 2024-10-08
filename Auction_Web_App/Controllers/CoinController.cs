@@ -5,7 +5,6 @@ using Auction_Web_App.Interfaces;
 using Auction_Web_App.Mappers;
 using Auction_Web_App.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +17,7 @@ namespace Auction_Web_App.Controllers
         private readonly ApplicationDBContext _context;
         private readonly ICoinRepository _coinRepo;
         private readonly UserManager<User> _userManager;
+
         public CoinController(ApplicationDBContext context, UserManager<User> userManager, ICoinRepository coinRepo)
         {
             _context = context;
@@ -29,20 +29,15 @@ namespace Auction_Web_App.Controllers
         public async Task<IActionResult> GetAll()
         {
             var coins = await _coinRepo.GetAllAsync();
-            var coinDto = coins.Select(s => s.ToCoinDto());
-
-            return Ok(coinDto);
+            var coinDtos = coins.Select(s => s.ToCoinDto());
+            return Ok(coinDtos);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var coin = await _coinRepo.GetByIdAsync(id);
-
-            if (coin == null)
-            {
-                return NotFound();
-            }
+            if (coin == null) return NotFound();
 
             return Ok(coin.ToCoinDto());
         }
@@ -50,67 +45,48 @@ namespace Auction_Web_App.Controllers
         [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetByUser([FromRoute] string userId)
         {
-            var coin = await _coinRepo.GetByUserAsync(userId);
+            var coins = await _coinRepo.GetByUserAsync(userId);
+            if (coins == null || !coins.Any()) return NotFound();
 
-            if (coin == null)
-            {
-                return NotFound();
-            }
-            return Ok(coin.ToCoinDto());
+            var coinDtos = coins.Select(coin => coin.ToCoinDto());
+            return Ok(coinDtos);
         }
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Create(CreateCoinRequestDto coinDto)
+        public async Task<IActionResult> Create([FromBody] CreateCoinRequestDto coinDto)
         {
-            var username = User.GetUsername();
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            if (string.IsNullOrEmpty(username))
-            {
-                return BadRequest("Username cannot be null or empty");
-            }
+            var username = User.GetUsername();
+            if (string.IsNullOrEmpty(username)) return BadRequest("Username cannot be null or empty");
 
             var user = await _userManager.FindByNameAsync(username);
+            if (user == null) return NotFound("User not found");
 
-            if (user == null)
-            {
-                return NotFound("User not found");
-            }
-
-            var userId = user.Id;
-
-            var coinModel = coinDto.ToCoinFromCreate(userId);
+            var coinModel = coinDto.ToCoinFromCreate(user.Id);
             await _coinRepo.CreateAsync(coinModel);
             return CreatedAtAction(nameof(GetById), new { id = coinModel.Id }, coinModel.ToCoinDto());
         }
 
-        [HttpDelete]
-        [Route("{id}")]
-        public async Task<IActionResult> Delete([FromRoute] int id)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCoinRequestDto coinDto)
         {
-            var CoinModel = await _coinRepo.DeleteAsync(id);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            if (CoinModel == null)
-            {
-                return NotFound();
-            }
-            return NoContent();
-
-        }
-
-        [HttpPut]
-        [Route("{id}")]
-        public async Task<IActionResult> Update([FromRoute] int id, UpdateCoinRequestDto coinDto)
-        {
             var coinModel = await _coinRepo.UpdateAsync(id, coinDto.ToCoinFromUpdate(id));
-
-            if (coinModel == null)
-            {
-                return NotFound();
-            }
+            if (coinModel == null) return NotFound();
 
             return Ok(coinModel.ToCoinDto());
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+            var coin = await _coinRepo.DeleteAsync(id);
+            if (coin == null) return NotFound();
+
+            return NoContent();
+        }
     }
 }

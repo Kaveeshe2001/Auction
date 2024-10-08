@@ -80,7 +80,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="px-6">
-                <a href="#" className="relative font-semibold text-base py-6 block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                <a href="productDetails" className="relative font-semibold text-base py-6 block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                   Auction
                 </a>
               </li>

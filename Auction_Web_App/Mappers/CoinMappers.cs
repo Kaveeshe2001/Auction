@@ -18,18 +18,15 @@ namespace Auction_Web_App.Mappers
                 CreatedOn = coinModel.CreatedOn,
                 StyleId = coinModel.StyleId,
                 MediumId = coinModel.MediumId,
-                UserId = coinModel.UserId,
-
+                UserId = coinModel.UserId
             };
         }
 
         public static Coin ToCoinFromCreate(this CreateCoinRequestDto coinDto, string userId)
         {
-            string uniqueLot = GenerateUniqueLot();
-
             return new Coin
             {
-                Lot = uniqueLot,
+                Lot = GenerateUniqueLot(),
                 Title = coinDto.Title,
                 Image = coinDto.Image,
                 CurrentMarketPrice = coinDto.CurrentMarketPrice,
@@ -40,19 +37,11 @@ namespace Auction_Web_App.Mappers
             };
         }
 
-        private static string GenerateUniqueLot()
-        {
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var random = new Random();
-            return new string(Enumerable.Repeat(chars, 12)
-                .Select(s => s[random.Next(s.Length)]).ToArray());
-        }
-
-
         public static Coin ToCoinFromUpdate(this UpdateCoinRequestDto coinDto, int id)
         {
             return new Coin
             {
+                Id = id,
                 Title = coinDto.Title,
                 Image = coinDto.Image,
                 CurrentMarketPrice = coinDto.CurrentMarketPrice,
@@ -60,6 +49,13 @@ namespace Auction_Web_App.Mappers
                 StyleId = coinDto.StyleId,
                 MediumId = coinDto.MediumId
             };
+        }
+
+        private static string GenerateUniqueLot()
+        {
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            return new string(Enumerable.Repeat(chars, 12)
+                .Select(s => s[new Random().Next(s.Length)]).ToArray());
         }
     }
 }
