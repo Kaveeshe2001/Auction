@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { RiAuctionFill } from '@remixicon/react';
 import CardImg from '../../assets/banner.jpg';
 import PrimaryButton from '../uiItem/Buttons/PrimaryButton';
 
 const ProductCard = ({ coin }) => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 148,
+    hours: 11,
+    minutes: 44,
+    seconds: 59
+  });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prevTime => {
+        if (prevTime.seconds > 0) {
+          return { ...prevTime, seconds: prevTime.seconds - 1 };
+        } else if (prevTime.minutes > 0) {
+          return { ...prevTime, minutes: prevTime.minutes - 1, seconds: 59 };
+        } else if (prevTime.hours > 0) {
+          return { ...prevTime, hours: prevTime.hours - 1, minutes: 59, seconds: 59 };
+        } else if (prevTime.days > 0) {
+          return { ...prevTime, days: prevTime.days - 1, hours: 23, minutes: 59, seconds: 59 };
+        } else {
+          clearInterval(timer);
+          return prevTime;
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="w-64 rounded-lg overflow-hidden bg-gray-800 shadow-lg hover:shadow-[0_4px_20px_rgba(0,119,182,0.7)] transition-transform transform hover:scale-105 duration-300">
       <div className="relative">
@@ -26,22 +54,12 @@ const ProductCard = ({ coin }) => {
         </div>
         <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2">
           <ul className="flex justify-between items-center text-center">
-            <li>
-              <span className="block text-lg font-bold">148</span>
-              <span className="block text-xs">DAY</span>
-            </li>
-            <li>
-              <span className="block text-lg font-bold">11</span>
-              <span className="block text-xs">HR</span>
-            </li>
-            <li>
-              <span className="block text-lg font-bold">44</span>
-              <span className="block text-xs">MIN</span>
-            </li>
-            <li>
-              <span className="block text-lg font-bold">59</span>
-              <span className="block text-xs">SEC</span>
-            </li>
+            {Object.entries(timeLeft).map(([unit, value]) => (
+              <li key={unit}>
+                <span className="block text-lg font-bold">{value.toString().padStart(2, '0')}</span>
+                <span className="block text-xs">{unit.toUpperCase()}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
