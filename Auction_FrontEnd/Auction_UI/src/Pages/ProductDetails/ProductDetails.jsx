@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductDetailsLeft from './ProductDetailsLeft'
 import ProductDetailsRight from './ProductDetailsRight'
+import ProductCard from '../../components/Cards/ProductCard';
 
 const ProductDetails = () => {
     const [mainImage, setMainImage] = useState('');
@@ -29,10 +30,20 @@ const ProductDetails = () => {
     return (
       <div className="bg-gray-900 pt-[120px]">
         <div className="container mx-auto px-4 py-16">
-          <div className="bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+          <div className="bg-gray-950 rounded-lg shadow-xl overflow-hidden">
             <div className="md:flex">
               <ProductDetailsLeft mainImage={mainImage} images={images} changeImage={changeImage} />
               <ProductDetailsRight />
+            </div>
+          </div>
+          <div className="p-4 border-2 border-purple-200">  {/* Changed purple-250 to purple-500 since 250 may not exist */}
+            <h1 className="p-4 text-white text-center font-bold text-[2rem]">Related Products</h1>
+            <div className="p-4 flex flex-col gap-5 items-center justify-center md:flex-row md:flex-wrap">
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
             </div>
           </div>
         </div>
