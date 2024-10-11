@@ -51,7 +51,7 @@ const RegInput = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    navigate('/register');
+    navigate('/login');
   };
 
     return (

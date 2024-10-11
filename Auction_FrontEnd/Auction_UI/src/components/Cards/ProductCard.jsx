@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { RiAuctionFill } from '@remixicon/react';
+import { useNavigate } from 'react-router-dom';
 import CardImg from '../../assets/banner.jpg';
 import PrimaryButton from '../uiItem/Buttons/PrimaryButton';
 
 const ProductCard = ({ coin }) => {
+  const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState({
     days: 148,
     hours: 11,
@@ -31,6 +33,11 @@ const ProductCard = ({ coin }) => {
 
     return () => clearInterval(timer);
   }, []);
+
+  const handleBidClick = () => {
+    // Navigate to the product details page with the coin's ID
+    navigate(`/productDetails/${coin?.id}`);
+  };
 
   return (
     <div className="w-64 rounded-lg overflow-hidden bg-gray-800 shadow-lg hover:shadow-[0_4px_20px_rgba(0,119,182,0.7)] transition-transform transform hover:scale-105 duration-300">
@@ -83,7 +90,7 @@ const ProductCard = ({ coin }) => {
           </div>
         </div>
         <div className='mt-2' >
-        <PrimaryButton text="Bid Now" variant="secondary"/>
+          <PrimaryButton text="Bid Now" variant="secondary" onClick={handleBidClick} />
         </div>
       </div>
     </div>

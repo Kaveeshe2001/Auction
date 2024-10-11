@@ -9,12 +9,16 @@ const Home = () => {
     <div>
       <Hero />
       
-      <div className='p-4 border-2 border-purple-250'>
-        <h1 className='p-4 font-bold text-[2rem]'>Live Bidding</h1>
-        <div className="p-4">
-           <ProductCard/>
-        </div>
-      </div>
+      <div className="p-4 border-2 border-purple-200">  {/* Changed purple-250 to purple-500 since 250 may not exist */}
+            <h1 className="p-4 font-bold text-[2rem]">Live Products</h1>
+            <div className="p-4 flex flex-col gap-9 md:flex-row md:flex-wrap">
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+            </div>
+          </div>
       
       <div className='border-1 border-purple-250'>
         <h1 className='p-4 text-3xl font-bold'>Create and sell your Coins</h1>

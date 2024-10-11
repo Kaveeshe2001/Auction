@@ -3,7 +3,8 @@ import Logo from '../../../assets/coinlg.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-white shadow dark:bg-gray-900">
+    <footer className="bg-white shadow dark:bg-gray-800">
+        <div className='border-t border-purple-200'></div>
         <div className="w-full mx-auto max-w-screen-xl p-4 md:py-8">
             <div className="sm:flex sm:items-center sm:justify-between">
                 <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">

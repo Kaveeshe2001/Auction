@@ -8,15 +8,13 @@ import Footer from './components/Main/Footer/Footer';
 
 const App = () => {
   const location = useLocation();
-  const showNavbar = !['/login', '/signup', '/add-art'].includes(
-    location.pathname
-  );
+  const hideNavbarAndFooter = ['/login', '/register'].includes(location.pathname);
 
   return (
     <UserProvider>
-      {showNavbar && <Navbar />}
+      {!hideNavbarAndFooter && <Navbar />}
       <Outlet />
-      <Footer />
+      {!hideNavbarAndFooter && <Footer />}
       <ToastContainer />
     </UserProvider>
   );

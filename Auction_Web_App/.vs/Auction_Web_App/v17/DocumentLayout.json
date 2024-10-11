@@ -3,72 +3,20 @@
   "WorkspaceRootPath": "E:\\My Project 2\\Auction\\Auction_Web_App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\controllers\\coincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:controllers\\coincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\interfaces\\icoinrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:interfaces\\icoinrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\mappers\\coinmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:mappers\\coinmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\dto\\coin\\updatecoinrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:dto\\coin\\updatecoinrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\dto\\coin\\createcoinrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:dto\\coin\\createcoinrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\dto\\coin\\coindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:dto\\coin\\coindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\service\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:service\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\interfaces\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:interfaces\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\extensions\\claimsextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:extensions\\claimsextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,89 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ICoinRepository.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Interfaces\\ICoinRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\ICoinRepository.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Interfaces\\ICoinRepository.cs",
-              "RelativeToolTip": "Interfaces\\ICoinRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T07:57:30.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CoinMappers.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Mappers\\CoinMappers.cs",
-              "RelativeDocumentMoniker": "Mappers\\CoinMappers.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Mappers\\CoinMappers.cs",
-              "RelativeToolTip": "Mappers\\CoinMappers.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T07:57:08.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpdateCoinRequestDto.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Dto\\Coin\\UpdateCoinRequestDto.cs",
-              "RelativeDocumentMoniker": "Dto\\Coin\\UpdateCoinRequestDto.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Dto\\Coin\\UpdateCoinRequestDto.cs",
-              "RelativeToolTip": "Dto\\Coin\\UpdateCoinRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T07:56:50.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateCoinRequestDto.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Dto\\Coin\\CreateCoinRequestDto.cs",
-              "RelativeDocumentMoniker": "Dto\\Coin\\CreateCoinRequestDto.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Dto\\Coin\\CreateCoinRequestDto.cs",
-              "RelativeToolTip": "Dto\\Coin\\CreateCoinRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T07:56:36.282Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CoinDto.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Dto\\Coin\\CoinDto.cs",
-              "RelativeDocumentMoniker": "Dto\\Coin\\CoinDto.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Dto\\Coin\\CoinDto.cs",
-              "RelativeToolTip": "Dto\\Coin\\CoinDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T07:56:20.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CoinController.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Controllers\\CoinController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CoinController.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Controllers\\CoinController.cs",
-              "RelativeToolTip": "Controllers\\CoinController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T07:55:37.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -173,85 +43,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Coin.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Coin.cs",
-              "RelativeDocumentMoniker": "Models\\Coin.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Coin.cs",
-              "RelativeToolTip": "Models\\Coin.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T05:10:53.135Z",
+              "WhenOpened": "2024-10-07T05:12:01.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EmailSettings.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\EmailSettings.cs",
-              "RelativeDocumentMoniker": "Models\\EmailSettings.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\EmailSettings.cs",
-              "RelativeToolTip": "Models\\EmailSettings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T07:34:25.78Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA5AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-06T18:16:53.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAIwB8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T17:12:32.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EmailSender.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Service\\EmailSender.cs",
-              "RelativeDocumentMoniker": "Service\\EmailSender.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Service\\EmailSender.cs",
-              "RelativeToolTip": "Service\\EmailSender.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAYwEYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T17:16:02.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IEmailSender.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Interfaces\\IEmailSender.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IEmailSender.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Interfaces\\IEmailSender.cs",
-              "RelativeToolTip": "Interfaces\\IEmailSender.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T17:13:20.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "TokenService.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Service\\TokenService.cs",
               "RelativeDocumentMoniker": "Service\\TokenService.cs",
@@ -260,42 +78,6 @@
               "ViewState": "AQIAAA8AAAAAAAAAAAAmwC0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T05:12:17.166Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAowGMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T05:12:01.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Auction.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Auction.cs",
-              "RelativeDocumentMoniker": "Models\\Auction.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Auction.cs",
-              "RelativeToolTip": "Models\\Auction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T05:10:51.493Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ClaimsExtensions.cs",
-              "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Extensions\\ClaimsExtensions.cs",
-              "RelativeDocumentMoniker": "Extensions\\ClaimsExtensions.cs",
-              "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Extensions\\ClaimsExtensions.cs",
-              "RelativeToolTip": "Extensions\\ClaimsExtensions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T16:12:23.175Z"
             }
           ]
         }
