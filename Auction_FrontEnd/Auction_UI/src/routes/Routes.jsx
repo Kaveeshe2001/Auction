@@ -8,6 +8,7 @@ import ProtectedRoute from './ProtectedRoute';
 import AddArt from '../Pages/AddArt/AddArt';
 import Contact from '../Pages/Contact/Contact';
 import ProductDetails from '../Pages/ProductDetails/ProductDetails';
+import Productpage from '../Pages/ProductPage/Productpage';
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ export const router = createBrowserRouter([
         ),
       },
       { path: 'contact', element: <Contact /> },
+      { path: 'productpage', element: <Productpage /> },
       { path: 'productDetails/:id', element: <ProductDetails /> },
     ],
   },

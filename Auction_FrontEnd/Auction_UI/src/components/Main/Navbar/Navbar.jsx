@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Search, User } from 'lucide-react';
+import { User } from 'lucide-react';
 import Logo from "../../../assets/coinlg.png";
 import { useNavigate } from "react-router-dom";
 import CustomSearch from "../../uiItem/Search/CustomSearch"
+import Sidebar from "../../uiItem/Sidebar/Sidebar"
 import PrimaryButton from "../../uiItem/Buttons/PrimaryButton"
 import SecondaryButton from '../../uiItem/Buttons/SecondaryButton';
 
@@ -72,6 +73,7 @@ const Navbar = () => {
             </a>
           </div>
           {/* Sidebar component would go here */}
+          <Sidebar active={activeSidebar} />
           <nav className="hidden lg:block">
             <ul className="flex">
               <li className="px-6">
@@ -80,7 +82,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="px-6">
-                <a href="productDetails" className="relative font-semibold text-base py-6 block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                <a href="/productPage" className="relative font-semibold text-base py-6 block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                   Auction
                 </a>
               </li>
