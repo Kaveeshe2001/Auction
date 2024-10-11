@@ -35,7 +35,7 @@ const Home = () => {
       </div>
 
       <div className="p-4 border-2 border-purple-200">  {/* Changed purple-250 to purple-500 since 250 may not exist */}
-        <h1 className="p-4 font-bold text-[2rem]">Top Collections</h1>
+        <h1 className="p-4 font-bold text-[2rem]">Top</h1>
         <div className="p-4 flex flex-col gap-9 md:flex-row md:flex-wrap">
           <CategoryCard />
           <CategoryCard />

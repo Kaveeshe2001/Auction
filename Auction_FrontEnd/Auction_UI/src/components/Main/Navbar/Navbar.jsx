@@ -31,11 +31,11 @@ const Navbar = () => {
   }
 
   return (
-    <div className="w-full absolute z-50 bg-transparent border-b border-white/10 ">
-      <div className="py-3 border-b border-gray-200 mx-2">
+    <div className="w-full absolute z-50 bg-transparent border-b border-white/10">
+      <div className="py-3 border-b border-gray-200 mx-2 hidden md:block">
         <div className="container mx-auto">
-          <div className="flex justify-between items-center">
-            <ul className="flex items-center gap-5">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <ul className="flex flex-col md:flex-row items-center gap-3 md:gap-5 mb-3 md:mb-0">
               <li>
                 <a href="#" className="text-white flex items-center gap-2 hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                   <svg className="w-5 h-4 fill-current" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <ul className="flex items-center gap-3">
+            <ul className="flex items-center gap-3 mt-3 md:mt-0">
               <li>
                  <SecondaryButton text='How to Bid' link='#' />  
               </li>
@@ -65,29 +65,38 @@ const Navbar = () => {
         </div>
       </div>
 
-      <header className="flex items-center justify-between flex-nowrap mx-5">
-        <div className="flex items-center justify-between gap-20">
+      <header className="flex flex-wrap items-center justify-between mx-5 py-4">
+        <div className="flex items-center justify-between w-full lg:w-auto">
           <div className="nav-logo">
             <a href="/home">
               <img src={Logo} alt="logo" className="w-15 h-12" />
             </a>
           </div>
-          {/* Sidebar component would go here */}
-          <Sidebar active={activeSidebar} />
-          <nav className="hidden lg:block">
-            <ul className="flex">
-              <li className="px-6">
-                <a href="#" className="relative font-semibold text-base py-6 block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+          <div
+            className="lg:hidden flex flex-col items-end justify-center relative cursor-pointer"
+            onClick={handleClick}
+          >
+            <span className="w-6 h-0.5 bg-white block transition-transform duration-500 ease-in-out"></span>
+            <span className="w-9 h-0.5 bg-white block mt-2.5 transition-transform duration-500 ease-in-out"></span>
+            <span className="w-4 h-0.5 bg-white block mt-2.5 transition-transform duration-500 ease-in-out"></span>
+          </div>
+        </div>
+        
+        <div className={`w-full lg:flex lg:items-center lg:w-auto ${activeSidebar ? 'block' : 'hidden'}`}>
+          <nav className="lg:flex-grow">
+            <ul className="flex flex-col lg:flex-row">
+              <li className="px-6 py-2 lg:py-0">
+                <a href="#" className="relative font-semibold text-base block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                   Home
                 </a>
               </li>
-              <li className="px-6">
-                <a href="/productPage" className="relative font-semibold text-base py-6 block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+              <li className="px-6 py-2 lg:py-0">
+                <a href="/productPage" className="relative font-semibold text-base block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                   Auction
                 </a>
               </li>
-              <li className="px-6">
-                <a href="/contact" className="relative font-semibold text-base py-6 block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+              <li className="px-6 py-2 lg:py-0">
+                <a href="/contact" className="relative font-semibold text-base block text-white transition-colors hover:text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                   Contact
                 </a>
               </li>
@@ -95,42 +104,46 @@ const Navbar = () => {
           </nav>
         </div>
 
-        <div className="flex items-center justify-end gap-8">
+        <div className="flex items-center justify-end gap-4 mt-4 lg:mt-0 w-full lg:w-auto">
           <CustomSearch />
           
-          <div
-            className={`lg:hidden flex flex-col items-end justify-center relative cursor-pointer ${activeSidebar ? 'active' : ''}`}
-            onClick={handleClick}
-          >
-            <span className="w-6 h-0.5 bg-white block transition-transform duration-500 ease-in-out"></span>
-            <span className="w-9 h-0.5 bg-white block mt-2.5 transition-transform duration-500 ease-in-out"></span>
-            <span className="w-4 h-0.5 bg-white block mt-2.5 transition-transform duration-500 ease-in-out"></span>
-          </div>
-
           {isLoggedIn ? (
             <>
-              <a href="/profile" className="hidden lg:flex items-center gap-1 text-white bg-green-600 border-b border-green-500 rounded px-5 py-3 overflow-hidden relative z-10 group">
+              <a href="/profile" className="flex items-center gap-1 text-white bg-green-600 border-b border-green-500 rounded px-5 py-3 overflow-hidden relative z-10 group">
                 <User size={15} />
                 <span className="font-normal">My Account</span>
                 <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-green-500 rounded-full group-hover:w-56 group-hover:h-56 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"></span>
               </a>
               <button
                 onClick={handleLogout}
-                className="hidden lg:inline-block text-white bg-green-500 hover:bg-green-600 transition-colors font-semibold py-2 px-4 rounded"
+                className="text-white bg-green-500 hover:bg-green-600 transition-colors font-semibold py-2 px-4 rounded"
               >
                 Logout
               </button>
             </>
           ) : (
             <>
-              <div className='flex gap-2'>
-                <PrimaryButton text='Signup' variant='secondary' href='/register' onClick={(e) => handleSave(e)} />
-                <PrimaryButton text='Login' variant='secondary' href='/login' onClick={(e) => handleLogin(e)}/>
+              <div className='hidden lg:flex lg:gap-2'>
+                <PrimaryButton 
+                  text='Signup' 
+                  variant='secondary' 
+                  href='/register' 
+                  onClick={(e) => handleSave(e)} 
+                />
+                <PrimaryButton 
+                  text='Login' 
+                  variant='secondary' 
+                  href='/login' 
+                  onClick={(e) => handleLogin(e)}
+                />
               </div>
             </>
           )}
         </div>
       </header>
+      
+      {/* Sidebar component */}
+      <Sidebar active={activeSidebar} />
     </div>
   );
 };
