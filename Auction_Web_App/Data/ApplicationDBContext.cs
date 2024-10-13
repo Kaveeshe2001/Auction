@@ -1,4 +1,5 @@
 ﻿using Auction_Web_App.Models;
+using Auction_Web_App.Models.Entity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -53,6 +54,7 @@ namespace Auction_Web_App.Data
         public DbSet<Style> Style { get; set; }
         public DbSet<Medium> Medium { get; set; }
         public DbSet<Coin> Coin { get; set; }
+        public DbSet<CoinsEntity> CoinsEntity { get; set; }
         public DbSet<Auction> Auction { get; set; }
     }
 }
