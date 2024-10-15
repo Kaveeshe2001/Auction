@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Auction_Web_App.Controllers
 {
@@ -81,6 +82,28 @@ namespace Auction_Web_App.Controllers
             {
                 return NotFound();
             }
+            return Ok(coin);
+        }
+
+        [HttpPut("{id}")]
+
+        public async Task<IActionResult> UpdateCoinsAsync(Guid id, UpdateCoinsDto updateCoinsDto)
+        {
+            var coin = await _dbContext.CoinsEntity.FindAsync(id);
+            if (coin == null)
+            {
+                return NotFound();
+            }
+
+            coin.Lot = updateCoinsDto.Lot;
+            coin.Title = updateCoinsDto.Title;
+            coin.Image = updateCoinsDto.Image;
+            coin.Description = updateCoinsDto.Description;
+            coin.Category = updateCoinsDto.Category;
+            coin.CurrentPrice = updateCoinsDto.CurrentPrice;
+            coin.Condition = updateCoinsDto.Condition;
+
+            await _dbContext.SaveChangesAsync();
             return Ok(coin);
         }
     }
