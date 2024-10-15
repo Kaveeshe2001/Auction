@@ -7,9 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Auction_Web_App.Controllers
 {
@@ -86,13 +84,19 @@ namespace Auction_Web_App.Controllers
         }
 
         [HttpPut("{id}")]
-
-        public async Task<IActionResult> UpdateCoinsAsync(Guid id, UpdateCoinsDto updateCoinsDto)
+        [Authorize]
+        public async Task<IActionResult> UpdateCoins(Guid id, UpdateCoinsDto updateCoinsDto)
         {
             var coin = await _dbContext.CoinsEntity.FindAsync(id);
             if (coin == null)
             {
                 return NotFound();
+            }
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null || coin.UserId != user.Id)
+            {
+                return Unauthorized("You are not authorized to update this coin.");
             }
 
             coin.Lot = updateCoinsDto.Lot;
@@ -105,6 +109,27 @@ namespace Auction_Web_App.Controllers
 
             await _dbContext.SaveChangesAsync();
             return Ok(coin);
+        }
+
+        [HttpDelete("{id}")]
+        [Authorize]
+        public async Task<IActionResult> DeleteCoins(Guid id)
+        {
+            var coin = await _dbContext.CoinsEntity.FindAsync(id);
+            if (coin == null)
+            {
+                return NotFound();
+            }
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null || coin.UserId != user.Id)
+            {
+                return Unauthorized("You are not authorized to delete this coin.");
+            }
+
+            _dbContext.CoinsEntity.Remove(coin);
+            await _dbContext.SaveChangesAsync();
+            return NoContent();
         }
     }
 }
