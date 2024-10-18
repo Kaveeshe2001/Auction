@@ -17,8 +17,15 @@ namespace Auction_Web_App.Models.Entity
         public decimal CurrentPrice { get; set; }
         public string Condition { get; set; }
         public DateTime? CreatedOn { get; set; } = DateTime.Now;
-        public string UserId { get; set; }
-        public User User { get; set; }
+
+        [Required]
+        public string? UserId { get; set; }
+        [ForeignKey("ApplicationUser")]
+        public User? User { get; set; }
+
+        public List<Auction>? Auctions { get; set; }
+        public List<Bid>? Bids { get; set; }
+        public List<Comment>? Comments { get; set; }
 
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Auction_Web_App.Dto.CoinsEntity
 {
-    public class UpdateCoins
+    public class UpdateCoinsDto
     {
         public string Lot { get; set; }
         public string Title { get; set; }
