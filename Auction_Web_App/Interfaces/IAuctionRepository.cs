@@ -10,7 +10,6 @@ namespace Auction_Web_App.Interfaces
         Task<Auction> CreateAsync(Auction auctionModel);
         Task<Auction?> DeleteAsync(int id);
         Task<Auction?> GetByCoinId(int id);
-        Task CheckAndUpdateStatus(Auction auction);
         Task<List<Auction>> GetByUserAsync(string userId, QueryObject? queryObject = null);
     }
 }

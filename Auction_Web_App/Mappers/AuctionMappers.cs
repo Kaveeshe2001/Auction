@@ -1,4 +1,5 @@
-﻿using Auction_Web_App.Models;
+﻿using Auction_Web_App.Dto.Auction;
+using Auction_Web_App.Models;
 
 namespace Auction_Web_App.Mappers
 {
@@ -13,11 +14,12 @@ namespace Auction_Web_App.Mappers
                 StartDate = auctionModel.StartDate,
                 EndDate = auctionModel.EndDate,
                 UserId = auctionModel.UserId,
-                ArtId = auctionModel.CoinsId,
+                CoinsId = auctionModel.CoinsId ?? 0,
                 CreatedDate = auctionModel.CreatedDate,
             };
         }
-        public static Auction ToCreateAuctionDto(this CreateAuctionDto auctionDto, string userId)
+
+        public static Auction ToAuction(this CreateAuctionDto auctionDto, string userId)
         {
             return new Auction
             {
@@ -25,16 +27,21 @@ namespace Auction_Web_App.Mappers
                 EndDate = auctionDto.EndDate,
                 UserId = userId,
                 CoinsId = auctionDto.CoinsId,
+                Status = "Pending", 
+                CurrentPrice = "0", 
+                CreatedDate = DateTime.Now
             };
         }
-        public static Auction ToUpdateAuctionDto(this UpdateAuctionDto auctionDto, int id)
+
+        public static Auction ToAuction(this UpdateAuctionDto auctionDto, int id)
         {
             return new Auction
             {
+                Id = id,
                 Status = auctionDto.Status,
                 StartDate = auctionDto.StartDate,
                 EndDate = auctionDto.EndDate,
-                CoinsId = auctionDto.ArtId
+                CoinsId = auctionDto.CoinsId
             };
         }
     }
