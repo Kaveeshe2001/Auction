@@ -11,7 +11,6 @@ namespace Auction_Web_App.Models.Entity
         public User? User { get; set; }
 
         public int? CoinsId { get; set; }
-        [ForeignKey("CoinsEntity")]
 
         public CoinsEntity? CoinsEntity { get; set; }
     }

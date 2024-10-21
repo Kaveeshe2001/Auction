@@ -55,7 +55,6 @@ namespace Auction_Web_App.Data
         public DbSet<Medium> Medium { get; set; }
         public DbSet<Coin> Coin { get; set; }
         public DbSet<CoinsEntity> CoinsEntity { get; set; }
-        public DbSet<Bid> Bids { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Auction> Auction { get; set; }
     }

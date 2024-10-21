@@ -24,7 +24,6 @@ namespace Auction_Web_App.Models.Entity
         public User? User { get; set; }
 
         public List<Auction>? Auctions { get; set; }
-        public List<Bid>? Bids { get; set; }
         public List<Comment>? Comments { get; set; }
 
     }
