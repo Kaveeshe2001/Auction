@@ -38,7 +38,7 @@ export const UserProvider = ({ children }) => {
           setToken(res?.data.token);
           setUser(userObj);
           toast.success('Account Created Successfully');
-          navigate('/');
+          navigate('/login');
         }
       })
       .catch((e) => toast.warning('Server Error Occurred' + e));
@@ -58,7 +58,7 @@ export const UserProvider = ({ children }) => {
           setToken(res?.data.token);
           setUser(userObj);
           toast.success('Login Success');
-          navigate('/');
+          navigate('/addProduct'); 
         }
       })
       .catch((e) => toast.warning('Server Error Occurred' + e));

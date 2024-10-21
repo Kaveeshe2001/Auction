@@ -1,5 +1,4 @@
 import { Menu, Popover, Transition } from '@headlessui/react'
-import classNames from 'classnames'
 import React, { Fragment } from 'react'
 import { HiOutlineBell, HiOutlineChatAlt, HiOutlineSearch } from 'react-icons/hi'
 import { useNavigate } from 'react-router-dom'

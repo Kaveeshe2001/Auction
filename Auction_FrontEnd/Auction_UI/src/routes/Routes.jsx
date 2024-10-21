@@ -5,10 +5,10 @@ import Home from '../Pages/Home';
 import Login from '../Pages/Login/Login';
 import Registration from '../Pages/Register/Registration';
 import ProtectedRoute from './ProtectedRoute';
-import AddArt from '../Pages/AddArt/AddArt';
 import Contact from '../Pages/Contact/Contact';
 import ProductDetails from '../Pages/ProductDetails/ProductDetails';
 import Productpage from '../Pages/ProductPage/Productpage';
+import AddProducts from '../SellerDashboard/Page/Products/AddProducts';
 
 export const router = createBrowserRouter([
   {
@@ -19,10 +19,10 @@ export const router = createBrowserRouter([
       { path: 'login', element: <Login /> },
       { path: 'register', element: <Registration /> },
       {
-        path: 'add-art',
+        path: 'addProduct',
         element: (
           <ProtectedRoute>
-            <AddArt />
+            <AddProducts />
           </ProtectedRoute>
         ),
       },
