@@ -18,15 +18,21 @@ export const DASHBOARD_SIDEBAR_LINKS = [
         icon: <HiOutlineViewGrid />
     },
     {
-        key: 'product',
-        label: 'Product',
-        path: '/product',
-        icon: <HiOutlineViewGrid />
+        key: 'coins',
+        label: 'Coin',
+        path: '/coins',
+        icon: <HiOutlineShoppingCart  />
     },
     {
         key: 'addCoin',
         label: 'Add Coin',
         path: '/addCoin',
+        icon: <HiOutlineViewGrid />
+    },
+    {
+        key: 'addCategory',
+        label: 'Add Category',
+        path: '/addCategory',
         icon: <HiOutlineViewGrid />
     },
     {
