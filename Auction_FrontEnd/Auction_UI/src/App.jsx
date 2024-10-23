@@ -8,7 +8,7 @@ import Footer from './components/Main/Footer/Footer';
 
 const App = () => {
   const location = useLocation();
-  const hideNavbarAndFooter = ['/login', '/register'].includes(location.pathname);
+  const hideNavbarAndFooter = ['/login', '/register', '/profile'].includes(location.pathname);
 
   return (
     <UserProvider>

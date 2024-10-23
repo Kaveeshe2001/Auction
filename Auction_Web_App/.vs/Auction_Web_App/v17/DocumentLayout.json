@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\My Project 2\\Auction\\Auction_Web_App\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\entity\\coinsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\entity\\coinsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\entity\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\entity\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\entity\\coinsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\entity\\coinsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\entity\\bid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ApplicationDBContext.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Data\\ApplicationDBContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDBContext.cs",
@@ -50,18 +50,17 @@
               "RelativeToolTip": "Data\\ApplicationDBContext.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAYwDgAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:33:52.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T17:33:52.475Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "CoinsEntity.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Entity\\CoinsEntity.cs",
               "RelativeDocumentMoniker": "Models\\Entity\\CoinsEntity.cs",
               "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Entity\\CoinsEntity.cs",
               "RelativeToolTip": "Models\\Entity\\CoinsEntity.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA7wBkAAAA0AAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA5wBkAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T17:30:47.949Z",
               "EditorCaption": ""
@@ -76,12 +75,11 @@
               "RelativeToolTip": "Models\\Entity\\Bid.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:29:36.785Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T17:29:36.785Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Comment.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Entity\\Comment.cs",
               "RelativeDocumentMoniker": "Models\\Entity\\Comment.cs",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "Models\\Entity\\Comment.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:28:15.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T17:28:15.197Z"
             },
             {
               "$type": "Document",
@@ -102,12 +99,11 @@
               "RelativeToolTip": "Models\\Auction.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:26:28.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T17:26:28.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -115,8 +111,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:09:01.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T17:09:01.483Z"
             },
             {
               "$type": "Document",
@@ -128,8 +123,7 @@
               "RelativeToolTip": "Models\\Coin.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:07:17.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T17:07:17.796Z"
             }
           ]
         }

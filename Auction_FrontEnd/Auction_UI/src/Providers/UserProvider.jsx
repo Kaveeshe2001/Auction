@@ -58,7 +58,7 @@ export const UserProvider = ({ children }) => {
           setToken(res?.data.token);
           setUser(userObj);
           toast.success('Login Success');
-          navigate('/addProduct'); 
+          navigate('/profile'); 
         }
       })
       .catch((e) => toast.warning('Server Error Occurred' + e));

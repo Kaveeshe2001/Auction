@@ -8,7 +8,8 @@ import ProtectedRoute from './ProtectedRoute';
 import Contact from '../Pages/Contact/Contact';
 import ProductDetails from '../Pages/ProductDetails/ProductDetails';
 import Productpage from '../Pages/ProductPage/Productpage';
-import AddProducts from '../SellerDashboard/Page/Products/AddProducts';
+import Profile from '../Pages/Profile/Profile';
+import AddCoin from '../Pages/Profile/page/AddItems/AddCoin';
 
 export const router = createBrowserRouter([
   {
@@ -19,13 +20,14 @@ export const router = createBrowserRouter([
       { path: 'login', element: <Login /> },
       { path: 'register', element: <Registration /> },
       {
-        path: 'addProduct',
+        path: 'profile',
         element: (
           <ProtectedRoute>
-            <AddProducts />
+            <Profile />
           </ProtectedRoute>
         ),
       },
+      { path: 'addCoin', element: <AddCoin />},
       { path: 'contact', element: <Contact /> },
       { path: 'productpage', element: <Productpage /> },
       { path: 'productDetails/:id', element: <ProductDetails /> },
