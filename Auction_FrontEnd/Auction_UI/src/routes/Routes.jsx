@@ -10,6 +10,8 @@ import ProductDetails from '../Pages/ProductDetails/ProductDetails';
 import Productpage from '../Pages/ProductPage/Productpage';
 import Profile from '../Pages/Profile/Profile';
 import AddCoin from '../Pages/Profile/page/AddItems/AddCoin';
+import Profileboard from '../Pages/Profile/page/Profileboard/Profileboard';
+import CoinItems from '../Pages/Profile/page/CoinPage/CoinItems';
 
 export const router = createBrowserRouter([
   {
@@ -19,15 +21,19 @@ export const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'login', element: <Login /> },
       { path: 'register', element: <Registration /> },
-      {
+      { 
         path: 'profile',
         element: (
           <ProtectedRoute>
             <Profile />
           </ProtectedRoute>
         ),
+        children: [
+          { index: true, element: <Profileboard /> },
+          { path: 'addCoin', element: <AddCoin /> },
+          { path: 'coinItems', element: <CoinItems /> },
+        ]
       },
-      { path: 'addCoin', element: <AddCoin />},
       { path: 'contact', element: <Contact /> },
       { path: 'productpage', element: <Productpage /> },
       { path: 'productDetails/:id', element: <ProductDetails /> },

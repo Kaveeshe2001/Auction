@@ -14,49 +14,49 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     {
         key: 'dashboard',
         label: 'Dashboard',
-        path: '/',
+        path: '/profile', // Updated to match the profile route
         icon: <HiOutlineViewGrid />
     },
     {
-        key: 'coins',
+        key: 'coinItems',
         label: 'Coin',
-        path: '/coins',
-        icon: <HiOutlineShoppingCart  />
+        path: '/profile/coinItems', // Updated to match nested route
+        icon: <HiOutlineShoppingCart />
     },
     {
         key: 'addCoin',
         label: 'Add Coin',
-        path: '/addCoin',
+        path: '/profile/addCoin', // Updated to match nested route
         icon: <HiOutlineViewGrid />
     },
     {
         key: 'addCategory',
         label: 'Add Category',
-        path: '/addCategory',
+        path: '/profile/addCategory', // Updated to match nested route
         icon: <HiOutlineViewGrid />
     },
     {
         key: 'orders',
         label: 'Orders',
-        path: '/orders',
+        path: '/profile/orders', // Updated to match nested route
         icon: <HiOutlineCube />
     },
     {
         key: 'customers',
         label: 'Customers',
-        path: '/customers',
+        path: '/profile/customers', // Updated to match nested route
         icon: <HiOutlineShoppingCart />
     },
     {
         key: 'transactions',
         label: 'Transactions',
-        path: '/transactions',
+        path: '/profile/transactions', // Updated to match nested route
         icon: <HiOutlineDocumentText />
     },
     {
         key: 'messages',
         label: 'Messages',
-        path: '/messages',
+        path: '/profile/messages', // Updated to match nested route
         icon: <HiOutlineAnnotation />
     }
 ];
@@ -65,13 +65,13 @@ export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
     {
         key: 'settings',
         label: 'Settings',
-        path: '/settings',
+        path: '/profile/settings', // Updated to match nested route
         icon: <HiOutlineCog />
     },
     {
         key: 'support',
         label: 'Help & Support',
-        path: '/support',
+        path: '/profile/support', // Updated to match nested route
         icon: <HiOutlineQuestionMarkCircle />
     }
 ];

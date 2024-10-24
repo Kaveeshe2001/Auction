@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\My Project 2\\Auction\\Auction_Web_App\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\entity\\coinsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\entity\\coinsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,10 +27,6 @@
       "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\entity\\bid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|e:\\my project 2\\auction\\auction_web_app\\models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C2A1E4E-1CC2-4AEA-8DE4-4E5F83A6126E}|Auction_Web_App.csproj|solutionrelative:models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ApplicationDBContext.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Data\\ApplicationDBContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDBContext.cs",
@@ -54,20 +54,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CoinsEntity.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Entity\\CoinsEntity.cs",
               "RelativeDocumentMoniker": "Models\\Entity\\CoinsEntity.cs",
               "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Entity\\CoinsEntity.cs",
               "RelativeToolTip": "Models\\Entity\\CoinsEntity.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA5wBkAAAA0AAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBkAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T17:30:47.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Bid.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Entity\\Bid.cs",
               "RelativeDocumentMoniker": "Models\\Entity\\Bid.cs",
@@ -79,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Comment.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Entity\\Comment.cs",
               "RelativeDocumentMoniker": "Models\\Entity\\Comment.cs",
@@ -91,19 +91,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Auction.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Auction.cs",
               "RelativeDocumentMoniker": "Models\\Auction.cs",
               "ToolTip": "E:\\My Project 2\\Auction\\Auction_Web_App\\Models\\Auction.cs",
               "RelativeToolTip": "Models\\Auction.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAA1AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBQAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:26:28.664Z"
+              "WhenOpened": "2024-10-21T17:26:28.664Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\My Project 2\\Auction\\Auction_Web_App\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
